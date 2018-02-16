@@ -28,7 +28,7 @@ class m230416_200116_tree extends Migration
         if ($this->db->driverName === 'mysql') {
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB';
         }
-        $this->createTable(self::TABLE_NAME, [
+        $this->createTable(static::TABLE_NAME, [
             'id' => $this->bigPrimaryKey(),
             'root' => $this->integer(),
             'lft' => $this->integer()->notNull(),
@@ -52,8 +52,13 @@ class m230416_200116_tree extends Migration
         ], $tableOptions);
         $this->createIndex('tree_NK1', static::TABLE_NAME, 'root');
         $this->createIndex('tree_NK2', static::TABLE_NAME, 'lft');
+<<<<<<< HEAD
         $this->createIndex('tree_NK3', self::TABLE_NAME, 'rgt');
         $this->createIndex('tree_NK4', self::TABLE_NAME, 'lvl');
+=======
+        $this->createIndex('tree_NK3', static::TABLE_NAME, 'rgt');
+        $this->createIndex('tree_NK4', static::TABLE_NAME, 'lvl');
+>>>>>>> t9221823420-test
         $this->createIndex('tree_NK5', static::TABLE_NAME, 'active');
     }
 
@@ -63,6 +68,6 @@ class m230416_200116_tree extends Migration
      */
     public function down()
     {
-        $this->dropTable(self::TABLE_NAME);
+        $this->dropTable(static::TABLE_NAME);
     }
 }
