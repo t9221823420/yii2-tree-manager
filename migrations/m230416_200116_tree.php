@@ -50,7 +50,7 @@ class m230416_200116_tree extends Migration
             'removable' => $this->boolean()->notNull()->defaultValue(true),
             'removable_all' => $this->boolean()->notNull()->defaultValue(false)
         ], $tableOptions);
-        $this->createIndex('tree_NK1', self::TABLE_NAME, 'root');
+        $this->createIndex('tree_NK1', static::TABLE_NAME, 'root');
         $this->createIndex('tree_NK2', self::TABLE_NAME, 'lft');
         $this->createIndex('tree_NK3', self::TABLE_NAME, 'rgt');
         $this->createIndex('tree_NK4', self::TABLE_NAME, 'lvl');
