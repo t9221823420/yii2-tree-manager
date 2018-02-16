@@ -52,13 +52,10 @@ class m230416_200116_tree extends Migration
         ], $tableOptions);
         $this->createIndex('tree_NK1', static::TABLE_NAME, 'root');
         $this->createIndex('tree_NK2', static::TABLE_NAME, 'lft');
-<<<<<<< HEAD
         $this->createIndex('tree_NK3', self::TABLE_NAME, 'rgt');
         $this->createIndex('tree_NK4', self::TABLE_NAME, 'lvl');
-=======
         $this->createIndex('tree_NK3', static::TABLE_NAME, 'rgt');
         $this->createIndex('tree_NK4', static::TABLE_NAME, 'lvl');
->>>>>>> t9221823420-test
         $this->createIndex('tree_NK5', static::TABLE_NAME, 'active');
     }
 
