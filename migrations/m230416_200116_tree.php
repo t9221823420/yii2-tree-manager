@@ -28,7 +28,7 @@ class m230416_200116_tree extends Migration
         if ($this->db->driverName === 'mysql') {
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB';
         }
-        $this->createTable(self::TABLE_NAME, [
+        $this->createTable(static::TABLE_NAME, [
             'id' => $this->bigPrimaryKey(),
             'root' => $this->integer(),
             'lft' => $this->integer()->notNull(),
