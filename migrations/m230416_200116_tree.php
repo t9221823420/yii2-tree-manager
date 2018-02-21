@@ -54,8 +54,6 @@ class m230416_200116_tree extends Migration
         $this->createIndex('tree_NK2', static::TABLE_NAME, 'lft');
         $this->createIndex('tree_NK3', static::TABLE_NAME, 'rgt');
         $this->createIndex('tree_NK4', static::TABLE_NAME, 'lvl');
-        $this->createIndex('tree_NK3', static::TABLE_NAME, 'rgt');
-        $this->createIndex('tree_NK4', static::TABLE_NAME, 'lvl');
         $this->createIndex('tree_NK5', static::TABLE_NAME, 'active');
     }
 
